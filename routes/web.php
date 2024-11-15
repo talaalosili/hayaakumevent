@@ -23,13 +23,11 @@ use App\Http\Controllers\ContactController;
 */
 
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [LandingpageController::class, 'index']);
+Route::get('land', [LandingpageController::class, 'index'])->name('land.index');
 
 Route::get('login', [LoginController::class, 'index'])->name('login.index');
 
-Route::get('land', [LandingpageController::class, 'index'])->name('land.index');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
